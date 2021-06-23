@@ -7,6 +7,7 @@ import { ButtonAdd } from '../../components/ButtonAdd';
 import { CategorySelect } from '../../components/CategorySelect';
 import { useState } from 'react';
 import { ListHeader } from '../../components/ListHeader';
+import { Background } from '../../components/Background'
 import { ListDivider } from '../../components/ListDivider';
 import { Appointment } from '../../components/Appointment';
 
@@ -117,7 +118,7 @@ export function Home() {
   }
 
   return (
-    <View>
+    <Background>
 
       <View style={styles.header}>
         <Profile />
@@ -145,6 +146,6 @@ export function Home() {
           ItemSeparatorComponent={() => <ListDivider/>}
         />
       </View>
-    </View>
+    </Background>
   )
 }
