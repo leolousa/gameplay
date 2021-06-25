@@ -5,6 +5,8 @@ export const styles = StyleSheet.create ({
   container: {
     width: 48,
     height: 48,
+    borderWidth: 1,
+    borderColor: theme.colors.secondary50,
     backgroundColor: theme.colors.secondary40,
     borderRadius: 8,
     color: theme.colors.heading,

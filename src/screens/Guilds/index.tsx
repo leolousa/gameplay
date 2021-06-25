@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, FlatList } from 'react-native'
+import { View, FlatList, Text } from 'react-native';
 import { Guild } from '../../components/Guild'
 import { ListDivider } from '../../components/ListDivider'
 import { GuildProps } from '../../components/Guild';
@@ -23,6 +23,30 @@ export function Guilds({ handleGuildSelect }: Props) {
       name: 'Os caras',
       icon: 'imagem.png',
       owner: true
+    },
+    {
+      id: '3',
+      name: 'Os caras',
+      icon: 'imagem.png',
+      owner: true
+    },
+    {
+      id: '4',
+      name: 'Os caras',
+      icon: 'imagem.png',
+      owner: true
+    },
+    {
+      id: '5',
+      name: 'Os caras',
+      icon: 'imagem.png',
+      owner: true
+    },
+    {
+      id: '6',
+      name: 'Os caras',
+      icon: 'imagem.png',
+      owner: true
     }
   ]
 
@@ -37,9 +61,12 @@ export function Guilds({ handleGuildSelect }: Props) {
             onPress={() => handleGuildSelect(item)}
           />
         )}    
-        showsVerticalScrollIndicator={false}
-        ItemSeparatorComponent={() => <ListDivider />}
         style={styles.guilds}
+        showsVerticalScrollIndicator={false}
+        decelerationRate={0.99}
+        ItemSeparatorComponent={() => <ListDivider isCentered />}
+        ListHeaderComponent={() => <ListDivider isCentered />}
+        contentContainerStyle={{ paddingBottom: 69, paddingTop: 103 }}
       />
     </View>
   );  
